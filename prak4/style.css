@@ -105,3 +105,22 @@ summary:hover{
   font-family: 'Font Awesome 6 Free' !important;
   margin: 0 1rem;
 }
+
+.picture-container {
+    text-align: center;
+}
+
+.picture-container img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.video-container {
+text-align: center;
+}
+
+.video-container video {
+  width: 100%;
+  max-width: 600px;
+}
