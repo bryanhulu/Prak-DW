@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a2d9b6efce.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="html5-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>HTML & CSS | Praktikum Desain Web</title>
+</head>
+<body>
+    <h1>Formulir Pembuatan Proyek Web</h1>
+            <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fa-solid fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+    <form action="/submit-recipe" method="post">
+    <fieldset>
+        <legend>Informasi Dasar Proyek</legend>
+        <p>
+            <label for="recipe-name">Nama Proyek:</label><br>
+            <input type="text" id="recipe-name" placeholder="Masukkan Nama Proyek" name="recipe_name" required maxlength="80">
+        </p>
+        <p>
+            <label for="prep-time">Waktu Pengerjaan (menit):</label><br>
+            <input type="number" id="prep-time" name="prep_time" min="5" placeholder="Contoh: 60">
+        </p>
+    </fieldset>
+
+    <fieldset>
+        <legend>Detail Tambahan</legend>
+        <p>
+            <label for="difficulty">Tingkat Kesulitan (1-5):</label><br>
+            <input type="range" id="difficulty" name="difficulty" min="1" max="5" step="1">
+        </p>
+        <p>
+            <label for="recipe-category">Kategori Proyek:</label><br>
+            <input list="categories" placeholder="Kategori Proyek" name="recipe_category">
+            <datalist id="categories">
+                <option value="Halaman Dasar HTML"></option>
+                <option value="Desain CSS"></option>
+                <option value="Responsive Layout"></option>
+                <option value="Formulir Interaktif"></option>
+            </datalist>
+        </p>
+    </fieldset>
+
+    <button type="submit">Kirim Proyek</button>
+</form>
+
+<h1>Pratinjau Halaman Proyek</h1>
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fa-solid fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+<article>
+    <header>
+        <h3>HTML & CSS</h3>
+    </header>  
+    <div class="picture-container">
+    <figure>
+    <picture>
+      <source media="(min-width: 600px)" srcset="assets/html5.jpg">
+      <img src="assets/html5.jpg" alt="Logo HTML dan CSS">
+    </picture>
+    <figcaption>Logo HTML5 sebagai simbol struktur dan gaya web modern</figcaption>
+</figure>
+
+    </div>
+
+    <p>
+HTML (HyperText Markup Language) digunakan untuk membangun struktur halaman web, sedangkan CSS (Cascading Style Sheets) digunakan untuk memberikan gaya dan tampilan visual. Dengan kombinasi keduanya, pengembang dapat membuat website yang rapi, menarik, dan mudah diakses di berbagai perangkat.
+    </p>
+
+    <details>
+        <summary>Tampilkan Informasi Tambahan</summary>
+        <ul class="bry">
+            <li>Bahasa: HTML5 & CSS3</li>
+            <li>Jenis Layout: Responsive</li>
+            <li>Framework: Tidak menggunakan framework</li>
+        </ul>
+    </details>
+
+    <h3>Video Tutorial</h3>
+    <div class="video-container">
+    <video controls width="600">
+        <source src="assets/01 praktikum dasar dasar html.mp4" type="video/mp4">
+        Maaf, browser Anda tidak mendukung pemutaran video.
+        <track
+            label="Bahasa Indonesia"
+            kind="subtitles"
+            srclang="id"
+            src="subtitles.vtt"
+            default>
+    </video>
+    </div>
+
+    <footer>
+        <div class="video-container">
+        <p>Tingkat Kesulitan: <meter min="0" max="5" value="3" title="3 dari 5">Sedang</meter></p>
+        </div>
+    </footer>
+
+</article>
+</body>
+</html>
