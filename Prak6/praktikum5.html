@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="assets/html5.jpg">
+    <link rel="stylesheet" href="style.css">
+    <title>CSS | Praktikum 4</title>
+</head>
+<body>
+    <h1>Formulir Pengiriman Resep Baru</h1>
+    <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fa-solid fa-star"></i></div>
+        <div class="divider-custom-line"></div>
+    </div>
+
+    <form id= "form-resep" action="/submit-recipe" method="post">
+        <fieldset>
+            <legend>Informasi Dasar Resep</legend>
+            <p>
+                <label for="recipe-name">Nama Resep:</label><br>
+                <input type="text" id="recipe-name" placeholder="Masukkan Nama Resep" name="recipe_name" required maxlength="80">
+            </p>
+            <p>
+                <label for="prep-time">Waktu Persiapan (menit):</label><br>
+                <input type="number" id="prep-time" name="prep_time" min="5" placeholder="Contoh: 45">
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Detail Tambahan</legend>
+            
+                <p>
+                    <label for="difficulty">Tingkat Kesulitan (1-5):</label><br>
+                    <input type="range" id="difficulty" name="difficulty" min="1" max="5" step="1">
+                </p>
+
+                <span id="preview-difficulty">
+                    1
+                </span>
+            <p>
+                <label for="recipe-category">Kategori Resep:</label><br>
+                <input list="categories" placeholder="Kategori Resep" name="recipe_category">
+                <datalist id="categories">
+                    <option value="Makanan Pembuka"></option>
+                    <option value="Makanan Utama"></option>
+                    <option value="Hidangan Penutup"></option>
+                    <option value="Minuman"></option>
+                </datalist>
+            </p>
+            <p>
+                    <label for="desc">
+                desc
+            </label>
+            <textarea name="desc" id="desc-new" placeholder="Masukkan Deskripsi Resep" rows="4" cols="100"
+            ></textarea>
+        </p>
+        </fieldset>
+
+        <button type="reset" class="button">Reset</button>
+        <button type="submit" class="button">Kirim Resep</button>
+    </form>
+
+    <h1>Preview Halaman Resep</h1>
+    <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fa-solid fa-star"></i></div>
+        <div class="divider-custom-line"></div>
+    </div>
+
+    <article>
+        <header>
+            <h1 id="preview-title">Judul resep Akan Tampil Disini</h1>
+        </header>
+
+        <p>Waktu persiapan: <span id="prev-time">45 menit</span></p>
+        
+        <div class="picture-container">
+            <figure>
+                <picture>
+                    <source media="(min-width: 600px)" srcset="assets/html5.jpg">
+                    <img src="assets/html5.jpg" alt="Gambar hidangan utama resep">
+                </picture>
+                <figcaption>...</figcaption>
+            </figure>
+        </div>
+
+        <p>preview Desc</p>
+            <p id="preview-desc"></p>
+
+        <details>
+            <summary>Tampilkan Informasi Gizi</summary>
+            <ul class="bry">
+                <li>Kalori: 350kcal</li>
+                <li>Protein: 20g</li>
+                <li>Karbohidrat: 30g</li>
+            </ul>
+        </details>
+
+        <h3>Video Tutorial</h3>
+        <div class="video-container">
+            <video controls width="600">
+                <source src="assets/01 praktikum dasar dasar html.mp4" type="video/mp4">
+                Maaf, browser Anda tidak mendukung pemutaran video.
+                <track label="Bahasa Indonesia" kind="subtitles" srclang="id" src="subtitles.vtt" default>
+            </video>
+        </div>
+
+        <footer>
+            <div class="video-container">
+                <p>Tingkat Kesulitan:
+                    <meter min="0" max="5" value="3" title="3 dari 5">Sedang</meter>
+                </p>
+            </div>
+        </footer>
+    </article>
+    <script src="script.js"></script>
+</body>
+</html>
