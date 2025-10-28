@@ -39,7 +39,7 @@
                 </p>
 
                 <span id="preview-difficulty">
-                    1
+                Tingkat Kesulitan
                 </span>
             <p>
                 <label for="recipe-category">Kategori Resep:</label><br>
@@ -53,9 +53,9 @@
             </p>
             <p>
                     <label for="desc">
-                desc
+                Deskripsi
             </label>
-            <textarea name="desc" id="desc-new" placeholder="Masukkan Deskripsi Resep" rows="4" cols="100"
+            <textarea name="desc" id="desc-new" placeholder="Masukkan Deskripsi Resep" rows="7" cols="100"
             ></textarea>
         </p>
         </fieldset>
@@ -88,17 +88,23 @@
             </figure>
         </div>
 
-        <p>preview Desc</p>
-            <p id="preview-desc"></p>
+        <div class = "container-details">
+            <details>
+                <summary>preview Desc</summary>
+                <ul class="kolom">
+                    <li id="preview-desc"></li>
+                </ul>
+            </details>
 
-        <details>
-            <summary>Tampilkan Informasi Gizi</summary>
-            <ul class="bry">
-                <li>Kalori: 350kcal</li>
-                <li>Protein: 20g</li>
-                <li>Karbohidrat: 30g</li>
-            </ul>
-        </details>
+            <details>
+                <summary>Tampilkan Informasi Gizi</summary>
+                <ul class="kolom">
+                    <li>Kalori: 350kcal</li>
+                    <li>Protein: 20g</li>
+                    <li>Karbohidrat: 30g</li>
+                </ul>
+            </details>
+        </div>
 
         <h3>Video Tutorial</h3>
         <div class="video-container">
@@ -111,9 +117,7 @@
 
         <footer>
             <div class="video-container">
-                <p>Tingkat Kesulitan:
-                    <meter min="0" max="5" value="3" title="3 dari 5">Sedang</meter>
-                </p>
+                <p>Tingkat Kesulitan: <span id="preview-difficulty-footer"></span></p>
             </div>
         </footer>
     </article>

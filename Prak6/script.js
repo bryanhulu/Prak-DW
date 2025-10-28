@@ -69,11 +69,12 @@ descRecipe.addEventListener('input', () => {
         prevDesc.textContent = "Deskripsi resep Anda akan muncul di sini...";
     } else {
         prevDesc.textContent = descValue;
-    }
+}
 });
 
 const inputDifficult = document.getElementById("difficulty")
 const textDifficult = document.getElementById("preview-difficulty")
+const textDifficultFooter = document.getElementById("preview-difficulty-footer")
 
 inputDifficult.addEventListener('input', () => {
     let textKesulitan = '';
@@ -84,20 +85,29 @@ inputDifficult.addEventListener('input', () => {
     switch(diffValue) {
         case "1":
             textKesulitan = "Sangat Mudah";
+            warnaKesulitan = "green";
             break;
         case "2":
             textKesulitan = "Mudah";
+            warnaKesulitan = "lightgreen"
             break;
         case "3":
             textKesulitan = "Sedang";
+            warnaKesulitan = "Yellow"
             break;
         case "4":
             textKesulitan = "Sulit";
+            warnaKesulitan = "Orange"
             break;
         case "5":
             textKesulitan = "Sangat Sulit";
+            warnaKesulitan = "Red"
             break;
     }
 
     textDifficult.textContent = textKesulitan;
+    textDifficult.style.color = warnaKesulitan;
+
+    textDifficultFooter.textContent = textKesulitan;
+    textDifficultFooter.style.color = warnaKesulitan;
 })
