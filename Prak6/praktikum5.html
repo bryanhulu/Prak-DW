@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="assets/html5.jpg">
     <link rel="stylesheet" href="style.css">
-    <title>CSS | Praktikum 4</title>
+    <title>Bryan | praktikum Desain Web</title>
 </head>
 <body>
     <h1>Formulir Pengiriman Resep Baru</h1>
@@ -38,9 +38,7 @@
                     <input type="range" id="difficulty" name="difficulty" min="1" max="5" step="1">
                 </p>
 
-                <span id="preview-difficulty">
-                Tingkat Kesulitan
-                </span>
+                <span id="preview-difficulty"> Tingkat Kesulitan </span>
             <p>
                 <label for="recipe-category">Kategori Resep:</label><br>
                 <input list="categories" placeholder="Kategori Resep" name="recipe_category">
@@ -52,12 +50,13 @@
                 </datalist>
             </p>
             <p>
-                    <label for="desc">
-                Deskripsi
-            </label>
-            <textarea name="desc" id="desc-new" placeholder="Masukkan Deskripsi Resep" rows="7" cols="100"
-            ></textarea>
-        </p>
+                <label for="desc"> Deskripsi </label>
+                <textarea name="desc" id="desc-new" placeholder="Masukkan Deskripsi Resep" rows="7" cols="100"></textarea>
+            </p>
+            <p>
+                <label for="Nilai Gizi"> Nilai Gizi</label>
+                <textarea name="gizi" id="gizi-new" placeholder="Masukkan Informasi Gizi" rows="7" cols="100"></textarea>
+            </p>
         </fieldset>
 
         <button type="reset" class="button">Reset</button>
@@ -99,9 +98,7 @@
             <details>
                 <summary>Tampilkan Informasi Gizi</summary>
                 <ul class="kolom">
-                    <li>Kalori: 350kcal</li>
-                    <li>Protein: 20g</li>
-                    <li>Karbohidrat: 30g</li>
+                    <li id="preview-gizi"></li>
                 </ul>
             </details>
         </div>
@@ -115,11 +112,15 @@
             </video>
         </div>
 
-        <footer>
-            <div class="video-container">
-                <p>Tingkat Kesulitan: <span id="preview-difficulty-footer"></span></p>
-            </div>
-        </footer>
+    <footer>
+        <div class="video-container">
+            <p>
+                Tingkat Kesulitan: 
+                <span id="preview-difficulty-footer"></span>
+            </p>
+            <meter id="difficulty-meter-footer" min="1" max="5" value="3"></meter>
+        </div>
+    </footer>
     </article>
     <script src="script.js"></script>
 </body>

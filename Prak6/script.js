@@ -63,12 +63,24 @@ if (timePrev && input) {
 const descRecipe = document.getElementById("desc-new")
 const prevDesc = document.getElementById("preview-desc")
 descRecipe.addEventListener('input', () => {
-    const descValue = descRecipe.value;
+  const descValue = descRecipe.value;
+  
+  if (descValue === "") {
+    prevDesc.textContent = "Deskripsi resep Anda akan muncul di sini...";
+  } else {
+    prevDesc.textContent = descValue;
+  }
+});
+
+const Gizi = document.getElementById("gizi-new")
+const prevGizi = document.getElementById("preview-gizi")
+Gizi.addEventListener('input', () => {
+    const giziValue = Gizi.value;
     
-    if (descValue === "") {
-        prevDesc.textContent = "Deskripsi resep Anda akan muncul di sini...";
+    if (giziValue === "") {
+        prevGizi.textContent = "Informasi Gizi Anda akan muncul di sini...";
     } else {
-        prevDesc.textContent = descValue;
+        prevGizi.textContent = giziValue;
 }
 });
 
@@ -110,4 +122,51 @@ inputDifficult.addEventListener('input', () => {
 
     textDifficultFooter.textContent = textKesulitan;
     textDifficultFooter.style.color = warnaKesulitan;
+
+    inputDifficult.style.setProperty("--diff-color", warnaKesulitan);
 })
+
+const meterFooter = document.getElementById("difficulty-meter-footer");
+
+inputDifficult.addEventListener('input', () => {
+    let textKesulitan = '';
+    let warnaKesulitan = '';
+    const diffValue = inputDifficult.value;
+
+    switch (diffValue) {
+        case "1":
+            textKesulitan = "Sangat Mudah";
+            warnaKesulitan = "green";
+            break;
+        case "2":
+            textKesulitan = "Mudah";
+            warnaKesulitan = "lightgreen";
+            break;
+        case "3":
+            textKesulitan = "Sedang";
+            warnaKesulitan = "yellow";
+            break;
+        case "4":
+            textKesulitan = "Sulit";
+            warnaKesulitan = "orange";
+            break;
+        case "5":
+            textKesulitan = "Sangat Sulit";
+            warnaKesulitan = "red";
+            break;
+    }
+
+    // Teks kesulitan
+    textDifficult.textContent = textKesulitan;
+    textDifficult.style.color = warnaKesulitan;
+
+    textDifficultFooter.textContent = textKesulitan;
+    textDifficultFooter.style.color = warnaKesulitan;
+
+    // Slider warna
+    inputDifficult.style.setProperty("--diff-color", warnaKesulitan);
+
+    // Meter di footer mengikuti slider
+    meterFooter.value = diffValue;
+    meterFooter.style.setProperty("--diff-color", warnaKesulitan);
+});

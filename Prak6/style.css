@@ -163,3 +163,41 @@ border-radius: 8px;
 .button:hover {
     background-color: #333333;
 }
+
+/* Gaya dasar untuk slider */
+#difficulty {
+  width: 200px;
+  accent-color: var(--diff-color, #4CAF50); /* warna default hijau */
+  transition: accent-color 0.3s ease-in-out;
+}
+
+/* Untuk browser yang belum support accent-color (fallback) */
+#difficulty::-webkit-slider-thumb {
+  background-color: var(--diff-color, #4CAF50);
+  transition: background-color 0.3s ease-in-out;
+}
+
+#difficulty::-moz-range-thumb {
+  background-color: var(--diff-color, #4CAF50);
+  transition: background-color 0.3s ease-in-out;
+}
+
+meter {
+  width: 200px;
+  height: 15px;
+  border-radius: 8px;
+  background-color: #333;
+}
+
+/* Warna bar berdasarkan custom property */
+meter::-webkit-meter-bar {
+  background: #333;
+  border-radius: 8px;
+}
+
+meter::-webkit-meter-optimum-value {
+  background: var(--diff-color, green);
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
