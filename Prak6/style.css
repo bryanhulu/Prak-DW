@@ -77,7 +77,7 @@ summary{
     padding: 0.5rem;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 200px;
+    width: 600px;
 }
 
 summary:hover{
@@ -93,7 +93,7 @@ summary:hover{
   padding: 0.75rem;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  width: 250px;
+  width: 591px;
   color: white;                    
   list-style: none;                 
   margin: 0;                        
@@ -129,7 +129,7 @@ summary:hover{
 }
 
 .picture-container {
-    text-align: center;
+  text-align: left;
 }
 
 .picture-container img {
@@ -201,3 +201,44 @@ meter::-webkit-meter-optimum-value {
   transition: background-color 0.3s ease;
 }
 
+/* Layout dua kolom untuk preview */
+.preview-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Kiri: Gambar */
+.preview-left img {
+  width: 600px;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Kanan: Deskripsi & Gizi */
+.preview-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Responsif: jika layar kecil, susun vertikal */
+@media (max-width: 768px) {
+  .preview-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .preview-left img {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .preview-right {
+    width: 100%;
+  }
+}

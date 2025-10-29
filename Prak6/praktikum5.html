@@ -74,34 +74,36 @@
         <header>
             <h1 id="preview-title">Judul resep Akan Tampil Disini</h1>
         </header>
-
-        <p>Waktu persiapan: <span id="prev-time">45 menit</span></p>
         
-        <div class="picture-container">
-            <figure>
-                <picture>
-                    <source media="(min-width: 600px)" srcset="assets/html5.jpg">
-                    <img src="assets/html5.jpg" alt="Gambar hidangan utama resep">
-                </picture>
-                <figcaption>...</figcaption>
-            </figure>
+        <div class="preview-layout">
+            <div class="preview-left">
+                <figure>
+                    <picture>
+                        <source media="(min-width: 600px)" srcset="assets/html5.jpg">
+                        <img src="assets/html5.jpg" alt="Gambar hidangan utama resep">
+                    </picture>
+                    <figcaption>...</figcaption>
+                </figure>
+            </div>
+
+            <div class="preview-right">
+                <p>Waktu persiapan: <span id="prev-time">45 menit</span></p>
+                <details>
+                    <summary>Deskripsi Resep</summary>
+                    <ul class="kolom">
+                        <li id="preview-desc">Deskripsi resep Anda akan muncul di sini...</li>
+                    </ul>
+                </details>
+
+                <details>
+                    <summary>Informasi Gizi</summary>
+                    <ul class="kolom">
+                        <li id="preview-gizi">Informasi gizi Anda akan muncul di sini...</li>
+                    </ul>
+                </details>
+            </div>
         </div>
 
-        <div class = "container-details">
-            <details>
-                <summary>preview Desc</summary>
-                <ul class="kolom">
-                    <li id="preview-desc"></li>
-                </ul>
-            </details>
-
-            <details>
-                <summary>Tampilkan Informasi Gizi</summary>
-                <ul class="kolom">
-                    <li id="preview-gizi"></li>
-                </ul>
-            </details>
-        </div>
 
         <h3>Video Tutorial</h3>
         <div class="video-container">
