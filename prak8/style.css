@@ -1,0 +1,147 @@
+/* ====== GENERAL DARK THEME ====== */
+body {
+    background: #0e0f11;
+    color: #e3e3e3;
+    font-family: "Poppins", sans-serif;
+    padding-bottom: 40px;
+}
+
+h1, h2 {
+    color: #f8f8f8;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* ====== NAVBAR (optional) ====== */
+.nav-link {
+    color: #cfcfcf !important;
+    transition: 0.2s ease;
+}
+.nav-link:hover {
+    color: #ffffff !important;
+}
+
+/* ====== FORM INPUT ====== */
+.form-control,
+.form-select {
+    background: #1a1c1f;
+    border: 1px solid #333;
+    color: #e6e6e6;
+    border-radius: 10px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background: #1f2023;
+    color: #fff;
+    border-color: #5a5dff;
+    box-shadow: 0 0 10px rgba(90, 93, 255, 0.4);
+}
+
+/* LABEL */
+.form-label {
+    font-weight: 500;
+    color: #dcdcdc;
+}
+
+/* CHECKBOX */
+.form-check-label {
+    color: #d2d2d2;
+}
+
+/* ====== BUTTON ====== */
+.btn-primary, .btn-primary {
+    background: #003496;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 10px;
+    transition: 0.2s;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background: #003496;
+    transform: translateY(-5px);
+    transition: ease-in-out;
+}
+
+/* ====== CARD PREVIEW ====== */
+.profile-card {
+    width: 350px;
+    margin: auto;
+    background: #1b1d20;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5),
+                0 0 15px rgba(90,93,255,0.2);
+}
+
+.profile-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    filter: brightness(0.9);
+}
+
+/* CARD BODY */
+.profile-card-body {
+    padding: 20px;
+}
+
+.profile-field {
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.profile-field strong {
+    color: #ffffff;
+}
+
+.profile-field span {
+    color: #c0c0c0;
+}
+
+/* ====== HR SEPARATOR ====== */
+hr {
+    border-color: #3a3a3a;
+}
+
+.Judul-gede {
+    text-align: center;
+    color: #003496;
+    text-shadow: #ffffff;
+    font-weight: 600;
+    margin-bottom: 20px;
+}   
+
+/* ===== CENTERING FORM WRAPPER ===== */
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* ===== FORM CARD ===== */
+.form-card {
+    width: 450px;
+    background: #151618;
+    padding: 25px 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.5),
+                0 0 15px rgba(90,93,255,0.15);
+    border: 1px solid #26272a;
+}
+
+.form-card h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fafafa;
+}
+
+::placeholder {
+    color: #ffffff;
+    opacity: 1;
+}

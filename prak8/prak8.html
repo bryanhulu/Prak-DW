@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Pinjol</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="p-4">
+    <h1 class="Judul-gede">SELAMAT DATANG MANUSIA YANG BUTUH PINJAMAN!</h1>
+    <div class="form-wrapper">
+      <div class="form-card">
+        <h1>Input Biodata Buat Pinjol</h1>
+
+        <!-- ================= INPUTAN ================= -->
+        <div class="mb-3">
+          <label class="form-label">Nama Lengkap</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputNama"
+            placeholder="Cepat Masukkan Nama!"
+          />
+        </div>
+
+        <label class="form-label">Jenis Kelamin</label>
+        <select class="form-select" id="inputJK">
+          <option selected>Pilih jenis kelamin anda</option>
+          <option value="Pria">Pria</option>
+          <option value="Wanita">Wanita</option>
+          <option value="Gay">Gay</option>
+        </select>
+
+        <div class="mb-3 mt-3">
+          <label class="form-label">Pengalaman Kerja Sebelumnya</label>
+          <textarea
+            class="form-control"
+            id="inputPengalaman"
+            rows="1"
+            placeholder="Masukkan pengalaman anda untuk jaminan"
+          ></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label"
+            >Deskripsikan Mengapa Anda Ingin Pinjol</label
+          >
+          <textarea
+            class="form-control"
+            id="inputAlasan"
+            rows="3"
+            placeholder-white="Masukkin yang benr, kalo ga bener saya tendang!"
+          ></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Upload Foto Diri</label>
+          <input
+            class="form-control"
+            type="file"
+            id="inputFoto"
+            accept="image/*"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Masukkan Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="inputEmail"
+            placeholder="@gmail.com"
+          />
+        </div>
+
+        <label>Apakah Anda Siap Bekerja Di Kamboja?</label>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="kamboja"
+            id="kamboja1"
+            value="ya"
+          />
+          <label class="form-check-label" for="kamboja1">Ya</label>
+        </div>
+
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="kamboja"
+            id="kamboja2"
+            value="harus_ya"
+          />
+          <label class="form-check-label" for="kamboja2">Harus Ya</label>
+        </div>
+        <label for="range2" class="form-label"
+          >Seberapa Butuh Anda Dengan uang?</label
+        >
+        <input type="range" class="form-range" min="0" max="5" id="range2" />
+        <button id="btnKirim" class="btn btn-primary mt-3">Kirim</button>
+
+        <!-- ================= PREVIEW ================= -->
+        <hr class="my-4" />
+
+        <div id="previewSection" style="display: none">
+          <h2 class="text-center mb-4">Preview Biodata Anda</h2>
+
+          <div class="profile-card">
+            <img id="imgPreview" style="display: none" />
+            <div class="profile-card-body">
+              <div class="profile-field">
+                <strong>Nama:</strong> <span id="prevNama"></span>
+              </div>
+              <div class="profile-field">
+                <strong>Jenis Kelamin:</strong> <span id="prevJK"></span>
+              </div>
+              <div class="profile-field">
+                <strong>Pengalaman:</strong> <span id="prevPengalaman"></span>
+              </div>
+              <div class="profile-field">
+                <strong>Alasan:</strong> <span id="prevAlasan"></span>
+              </div>
+              <div class="profile-field">
+                <strong>Email:</strong> <span id="prevEmail"></span>
+              </div>
+              <div class="profile-field">
+                <strong>Kamboja:</strong> <span id="prevKamboja"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
